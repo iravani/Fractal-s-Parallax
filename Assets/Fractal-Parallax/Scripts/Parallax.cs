@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
 
     [SerializeField] ParallaxType parallaxType;
 
-    [Range(0f, 1f)]
+    [Range(-1f, 1f)]
     [SerializeField] float impact = 0;
 
     #endregion
@@ -71,7 +71,7 @@ public class Parallax : MonoBehaviour
 
     void move_the_object()
     {
-        gameObject.transform.Translate(-speed * Time.fixedDeltaTime * impact);
+        gameObject.transform.Translate(speed * Time.fixedDeltaTime * impact);
     }
     #endregion
 }
